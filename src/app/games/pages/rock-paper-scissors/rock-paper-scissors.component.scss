@@ -1,0 +1,50 @@
+:host{
+  .rock-paper-scissors{
+    @apply p-8 max-w-lg bg-red-300 mx-auto mt-[30%] lg:mt-[15%];
+
+    // &__info{
+    //   @apply ;
+    // }
+    // &__computer{
+    //   @apply ;
+    // }
+    &__user{
+      @apply border-t-2 mt-8 px-5 pt-8;
+      & > div{
+        @apply flex justify-center gap-3;
+        label{
+          @apply w-16 h-16 cursor-pointer;
+          /* HIDE RADIO */
+          [type=radio] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+          }
+
+          /* IMAGE STYLES */
+          [type=radio] + img {
+            cursor: pointer;
+          }
+
+          /* CHECKED STYLES */
+          [type=radio]:checked + img {
+            outline: 2px solid #1e293b;
+          }
+        }
+      }
+      p{
+        @apply text-center text-xl mt-3;
+        span{
+          @apply ml-3 text-blue-500;
+        }
+      }
+    }
+    &__actions{
+      @apply flex justify-center gap-3;
+      button{
+        //@apply ;
+      }
+    }
+  }
+}

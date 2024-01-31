@@ -1,0 +1,4 @@
+<section>
+  <h3>Games</h3>
+  <article *ngFor="let game of gameList" [routerLink]="game.url" class="cursor-pointer">{{ game.name }}</article>
+</section>
